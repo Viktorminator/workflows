@@ -22,5 +22,6 @@ gulp.task('coffee', function() {
 gulp.task('js', function() {
 	gulp.src(jsSources)
 		.pipe(concat('script.js'))
+		.pipe(browserify())
 		.pipe(gulp.dest('builds/development/js'))
 });
